@@ -7,6 +7,12 @@ terraform {
   }
 } 
 
+provider "infoblox" {
+ server = "192.168.100.100"
+  username = "pencho"
+}
+
+
 resource "infoblox_a_record" "a_rec_1_imported" {
     fqdn = "rec-a-1.imported.test.com"
     ip_addr = "192.168.1.2"
