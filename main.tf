@@ -8,17 +8,11 @@ terraform {
 } 
 
 provider "infoblox" {
- server = "192.168.100.100"
-  username = "pencho"
+ server = "78.83.117.100"
+  username = "ivan"
 }
 
-
-resource "infoblox_a_record" "a_rec_1_imported" {
-    fqdn = "rec-a-1.imported.test.com"
-    ip_addr = "78.83.117.100"
-    ttl = 10
-    comment = "A-record to be imported"
-    ext_attrs = jsonencode({
-      "Location" = "New office"
-    })
-  }
+resource "infoblox_txt_record" "rec1" {
+  fqdn = "sample1.example.org"
+  text = "this is just a sample"
+}
