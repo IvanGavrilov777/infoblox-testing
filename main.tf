@@ -12,7 +12,7 @@ provider "infoblox" {
   username = "ivan"
 }
 
-resource "infoblox_txt_record" "rec1" {
-  fqdn = "sample1.example.org"
-  text = "this is just a sample"
+resource "infoblox_a_record" "a_rec1" {
+  fqdn = "static1.example1.org"
+  ip_addr = "1.3.5.4" // not necessarily from a network existing in NIOS DB
 }
